@@ -6,14 +6,13 @@ body{
 
 }
 .container{
-    border: 1px solid black;
     width: 100%;
     height: 100vh;
     background-color:blanchedalmond;
     
 }
 .h2-head{
-    margin-top: 5px;
+    margin-top: 0px;
     padding: 0px;
     font-weight: bold;
     font-size:large;
@@ -24,7 +23,6 @@ body{
     margin-top: 2px;
     text-align: center;
     justify-content: center;
-    /* border: 1px solid red; */
     height: 150px;
     width: 400px;
     display: block;
@@ -56,4 +54,18 @@ body{
     height: 25px;
     border-radius: 8px;
     text-align: center;
+}
+.unit{
+    background-color: white;
+    margin-top: 5px;
+    height: 50px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    color:#813bf3e0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
