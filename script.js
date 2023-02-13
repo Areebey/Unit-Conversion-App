@@ -5,60 +5,25 @@
 */
 
 const convertEl=document.getElementById("convert-btn")
-let inputEl=document.getElementById("field")
 
-convertEl.addEventListener("click",function(){
-    console.log("Button click")
-inputEl=document.getElementById("field").value
-    inputEl.textContent = 22;
-})
+function convertUnits(){
+
+let inputEl=document.getElementById("field").value
 
 
-// ----------------------------------------------------------
-(() => {
-    let inputText = document.getElementById('text');
-    let submitBtn = document.getElementById('submit');
-    let triggerJSBtn = document.getElementById('button');
+    let result1=parseFloat(inputEl*3.281).toFixed(2);
+    let result01=parseFloat(inputEl/3.281).toFixed(2)
+    document.getElementById("meter-feet").innerHTML=inputEl+" meters"+" = "+result1+
+    " feets"+" | "+inputEl+" feets"+" = "+result01+" meters";
+   
+    let result2=parseFloat(inputEl*0.264).toFixed(2);
+    let result02=parseFloat(inputEl/0.264).toFixed(2);
+    document.getElementById("liter-gallon").innerHTML=inputEl+" liters"+" = "+result2+
+    " gallons"+" | "+inputEl+" gallons"+" = "+result02+" liters";
 
-    submitBtn.addEventListener('click', (event) => {
-        event.preventDefault(); // just prevent form submitted.
-    });
+    let result3=parseFloat(inputEl*2.204).toFixed(2);
+    let result03=parseFloat(inputEl/2.204).toFixed(2);
+    document.getElementById("kilogram-pound").innerHTML=inputEl+" kilograms"+" = "+result3+
+    " pounds"+" | "+inputEl+" pounds"+" = "+result03+" kilograms";
 
-    triggerJSBtn.addEventListener('click', (event) => {
-        const thisTarget = event.target;
-        event.preventDefault();
-        inputText.value = thisTarget.innerText;
-        inputText.dispatchEvent(new Event('input'));
-        inputText.dispatchEvent(new Event('change'));
-    });
-
-    inputText.addEventListener('beforeinput', (event) => {
-        const thisTarget = event.target;
-        console.log('beforeinput event. (%s)', thisTarget.value);
-    });
-
-    inputText.addEventListener('input', (event) => {
-        const thisTarget = event.target;
-        console.log('input event. (%s)', thisTarget.value);
-    });
-
-    inputText.addEventListener('change', (event) => {
-        const thisTarget = event.target;
-        console.log('change event. (%s)', thisTarget.value);
-    });
-
-    inputText.addEventListener('cut', (event) => {
-        const thisTarget = event.target;
-        console.log('cut event. (%s)', thisTarget.value);
-    });
-
-    inputText.addEventListener('copy', (event) => {
-        const thisTarget = event.target;
-        console.log('copy event. (%s)', thisTarget.value);
-    });
-
-    inputText.addEventListener('paste', (event) => {
-        const thisTarget = event.target;
-        console.log('paste event. (%s)', thisTarget.value);
-    });
-})();
+}

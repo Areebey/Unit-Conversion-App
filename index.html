@@ -10,30 +10,30 @@
 <body>
     <div class="container">
         <div class="head">
-            <h2 class="h2-head">Unit Conversion</h2>
-            <!-- <p>Input Value</p> -->
-            <!-- <div id="field"></div> -->
-            <input type="number" name="convert" id="field" >
-            <button class="shake-top" id="convert-btn">Convert</button>
+            <h1 class="h1-head">Unit Conversion</h1>
+            <input type="number" 
+                   name="convert" 
+                   placeholder="EnterNum"
+                   id="field" >
+            <button class="shake-top" id="convert-btn" onclick="convertUnits()">Convert</button>
         </div>
 
-            <div class="main">
+            
              <div class="conversions">
                 <div class="unit">
-                    <h5>Length (Meter/Feets)</h5><br>
-                    <p>0 l</p>
+                    <h3>Length (Meter/Feets)</h3><br>
+                    <p id="meter-feet"></p>
                 </div>
                 <div class="unit">
-                    <h5>Volume (Liters/Gallons)</h5><br>
-                    <p>12</p>
+                    <h3>Volume (Liters/Gallons)</h3><br>
+                    <p id="liter-gallon"></p>
                 </div>
                 <div class="unit">
-                    <h5>Mass (kilogram/Pounds)</h5><br>
-                    <p>34</p>
+                    <h3>Mass (kilogram/Pounds)</h3><br>
+                    <p id="kilogram-pound"></p>
                 </div>
-        
-        </div>
          </div>
+         
     </div>
 
     <script src="script.js"></script>
